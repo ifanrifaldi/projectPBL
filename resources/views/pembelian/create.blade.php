@@ -1,6 +1,39 @@
-@extends('admin.base')
+@extends('template.base')
 
 @section('content')
+<div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4 class="page-title">Si Nalar</h4>
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0);">Pembelian</a></li>
+                                            <li class="breadcrumb-item">Dashboard</li>
+                                            <li class="breadcrumb-item active">Create</li>
+                                        </ol>
+                                    </div><!--end col-->
+                                    <div class="col-auto align-self-center">
+                                        <a href="#" class="btn btn-sm btn-outline-info" id="Dash_Date">
+                                            <span class="day-name" id="Day_Name">Today:</span>&nbsp;
+                                            <span class="" id="Select_date">Jan 11</span>
+                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
+                                        </a>
+                                        <!-- <a href="#" class="btn btn-sm btn-outline-primary">
+                                            <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        </a> -->
+                                    </div><!--end col-->  
+                                </div><!--end row-->                                                              
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <!-- end page title end breadcrumb -->
+                </div><!-- container -->
+
+<div class="container">
+
     <div class="container">
       <div class="row">
         <div class="col-md-12 mt-5">
@@ -13,19 +46,19 @@
             <div class="card-body">
                   <div class="form-group">
                       <label for="" class="control-label">Nomor</label>
-                      <input type="text" class="form-control" name="nomor">
+                      <input type="text" class="form-control" name="nomor" readonly value="{{$nomor}}">
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Tanggal Pengajuan</label>
-                            <input type="text" class="form-control" name="tanggal_pengajuan">
+                            <input type="date" class="form-control" name="tanggal_pengajuan">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Tanggal Dibutuhkan</label>
-                            <input type="text" class="form-control" name="tanggal_dibutuhkan">
+                            <input type="date" class="form-control" name="tanggal_dibutuhkan">
                         </div>
                     </div>
                   </div>
@@ -39,13 +72,25 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Nama Divisi</label>
-                            <input type="text" class="form-control" name="nama_divisi">
+                            <select class="form-control" name="nama_divisi">
+                        <option>Pilih</option>
+                        <option value="iarrrrr">Divisi-1</option>
+                        <option value="iarrrrr">Divisi-2</option>
+                        <option value="iarrrrr">Divisi-3</option>
+                        <option value="iarrrrr">Divisi-4</option>
+                        <option value="iarrrrr">Divisi-6</option>
+                        <option value="iarrrrr">Divisi-7</option>
+                        <option value="iarrrrr">Divisi-8</option>
+                        <option value="iarrrrr">Divisi-9</option>
+                    </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                      <label for="" class="control-label">Nama Kegiatan</label>
-                      <input type="text" class="form-control" name="nama_kegiatan">
-                  </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                         <label for="" class="control-label">Nama Kegiatan</label>
+                         <input type="text" class="form-control" name="nama_kegiatan">
+                        </div>
+                    </div>
                   </div>
             </div>
           </div>
@@ -68,7 +113,7 @@
                   </div>
                   <div class="form-group">
                       <label for="" class="control-label">Deskripsi Barang</label>
-                      <textarea name="deskripsi" id="deskripsi" class="deskripsi_barang"></textarea>
+                      <textarea name="deskripsi_barang" id="deskripsi" class="form-control"></textarea>
                   </div>
                   <div class="row">
                     <div class="col-md-4">
@@ -86,7 +131,11 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="control-label">Class</label>
-                            <input type="text" class="form-control" name="class">
+                            <select class="form-control" name="class">
+                        <option>Pilih</option>
+                        <option value="Barang">Barang</option>
+                        <option value="Pangan">Pangan</option>
+                    </select>
                         </div>
                     </div>
                   </div>
@@ -99,13 +148,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Diketahui Oleh</label>
-                            <input type="text" class="form-control" name="diketahui_oleh">
+                            <input type="text" class="form-control" name="diketahui_oleh" value="{{old('')}}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Disetujui Oleh</label>
-                            <input type="text" class="form-control" name="disetujui_oleh">
+                            <input type="text" class="form-control" name="disetujui_oleh" value="{{old('')}}">
                         </div>
                     </div>
                    </div>

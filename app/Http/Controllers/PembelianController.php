@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Pembelian;
+use Carbon\Carbon;
 
 
 class PembelianController extends Controller{
@@ -11,13 +12,27 @@ class PembelianController extends Controller{
     } 
     function create(){
         $user = request()->user();
-        return view('pembelian.create');
+        $tanggals = Carbon::now()->format('Y-n-d');
+        $now = Carbon::now();
+        $thnBulan = $now->year.$now->month;
+        $cek = Pembelian::count();
+        if ($cek == 0) {
+            $urut = 0001;
+            $nomor = 'IAR'. $thnBulan . $urut;
+        } else {
+            $ambil = Pembelian::all()->last();
+            $urut = (int)substr($ambil->nomor, -4) + 1;
+            $nomor = 'IAR'. $thnBulan . $urut;
+        }
+        
+
+        return view('pembelian.create',compact('nomor')); 
     }
     function store(){
         $pembelian = new Pembelian;
         $pembelian->id = request('id');
         $pembelian->nomor = request('nomor');
-        $pembelian->tanggal_pengajuan = request('tanggal_pengatanggal_dibutuhkan');
+        $pembelian->tanggal_pengajuan = request('tanggal_pengajuan');
         $pembelian->tanggal_dibutuhkan = request('tanggal_dibutuhkan');
         $pembelian->nama = request('nama');
         $pembelian->nama_divisi = request('nama_divisi');
@@ -39,17 +54,16 @@ class PembelianController extends Controller{
     }
     function show(Pembelian $pembelian){
         $data['pembelian'] = $pembelian;
-        return view('produk.show' , $data);
+        return view('pembelian.show' , $data);
     }
     function edit(Pembelian $pembelian){
-        $data['produk'] = $pembelian;
-        return view('produk.edit' , $data);
+        $data['pembelian'] = $pembelian;
+        return view('pembelian.edit' , $data);
     }
     function update(Pembelian $pembelian){
-        $pembelian = new Pembelian;
+        
         $pembelian->id = request('id');
-        $pembelian->nomor = request('nomor');
-        $pembelian->tanggal_pengajuan = request('tanggal_pengatanggal_dibutuhkan');
+        $pembelian->tanggal_pengajuan = request('tanggal_pengajuan');
         $pembelian->tanggal_dibutuhkan = request('tanggal_dibutuhkan');
         $pembelian->nama = request('nama');
         $pembelian->nama_divisi = request('nama_divisi');

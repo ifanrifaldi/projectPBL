@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\PembelianController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::get('admin', [AdminController::class, 'showAdmin']);
 Route::get('beranda', [AdminController::class, 'showBeranda']);
 Route::resource('pembelian', PembelianController::class);
+
+Route::resource('admin', AdminController::class);
+Route::resource('divisi', DivisiController::class);
