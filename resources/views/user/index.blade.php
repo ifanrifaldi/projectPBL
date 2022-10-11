@@ -1,5 +1,4 @@
-
-@extends('adminview.base')
+@extends('template.base')
 
 @section('content')
 
@@ -8,28 +7,30 @@
             <div class="col-md-12 mt-5">
                 <div class="card">
                     <div class="card-header">
-                        Data Produk
-                        <a href="{{url('admin/create')}}" class="btn btn-info float-right"><i class="fa fa-plus"></i>Tambah Data</a>
+                        Data User
+                        <a href="{{url('admin/user/create')}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i>Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-datatable">
                             <thead>
                                 <th>No </th>
                                 <th>Aksi</th>
+                                <th>Username</th>
                                 <th>Nama</th>
-                                <th>Harga</th>
-                                <th>Stok</th>
-                                <th>Berat</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Level</th>
+                                <th>Produk</th>
+                                <th>Email</th>
                             </thead>
                             <tbody>
-                                @foreach($list_pembelian as $pembelian)
+                                @foreach($list_user as $user)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{url('pembelian', $pembelian->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
-                                            <a href="{{url('pembelian', $pembelian->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-                                            @include('adminview.utils.delete', ['url' => url('pembelian', $pembelian->id)])
+                                            <a href="{{url('admin/user', $user->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+                                            <a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                                            @include('template.utils.delete', ['url' => url('admin/user', $user->id)])
                                         </div>
                                     </td>
                                 </tr>

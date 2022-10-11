@@ -37,9 +37,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 mt-5">
-        <form action="{{url('pembelian')}}" method="post" enctype="multipart/form-data">
+        <form action="{{url('pembelian', $pembelian->id)}}" method="post" enctype="multipart/form-data">
           @csrf
-          @method("put")
+          @method("PUT")
           <div class="card">
             <div class="card-header">
               Edit Data Pembelian
@@ -53,13 +53,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Tanggal Pengajuan</label>
-                            <input type="date" class="form-control" name="tanggal_pengajuan">
+                            <input type="date" class="form-control" name="tanggal_pengajuan" value="{{$pembelian->tanggal_pengajuan}}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Tanggal Dibutuhkan</label>
-                            <input type="date" class="form-control" name="tanggal_dibutuhkan">
+                            <input type="date" class="form-control" name="tanggal_dibutuhkan" value="{{$pembelian->tanggal_dibutuhkan}}">
                         </div>
                     </div>
                   </div>
@@ -67,14 +67,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Nama</label>
-                            <input type="text" class="form-control" name="nama">
+                            <input type="text" class="form-control" name="nama" value="{{$pembelian->nama}}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Nama Divisi</label>
-                            <select class="form-control" name="nama_divisi">
-                        <option>Pilih</option>
+                            <select class="form-control" name="nama_divisi" value="">
+                        <option>{{$pembelian->nama_divisi}}</option>
                         <option value="iarrrrr">Divisi-1</option>
                         <option value="iarrrrr">Divisi-2</option>
                         <option value="iarrrrr">Divisi-3</option>
@@ -89,7 +89,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                          <label for="" class="control-label">Nama Kegiatan</label>
-                         <input type="text" class="form-control" name="nama_kegiatan">
+                         <input type="text" class="form-control" name="nama_kegiatan" value="{{$pembelian->nama_kegiatan}}">
                         </div>
                     </div>
                   </div>
@@ -102,7 +102,7 @@
                     <div class="col-md-9">
                         <div class="form-group">
                             <label for="" class="control-label">Nama Barang</label>
-                            <input type="text" class="form-control" name="nama_barang">
+                            <input type="text" class="form-control" name="nama_barang" value="{{$pembelian->nama_barang}}">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -114,26 +114,26 @@
                   </div>
                   <div class="form-group">
                       <label for="" class="control-label">Deskripsi Barang</label>
-                      <textarea name="deskripsi_barang" id="deskripsi" class="form-control"></textarea>
+                      <textarea name="deskripsi_barang" id="deskripsi" class="form-control">{{$pembelian->deskripsi_barang}}</textarea>
                   </div>
                   <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="control-label">Jumlah</label>
-                            <input type="text" class="form-control" name="jumlah">
+                            <input type="text" class="form-control" name="jumlah" value="{{$pembelian->jumlah}}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="control-label">Lokasi</label>
-                            <input type="text" class="form-control" name="lokasi">
+                            <input type="text" class="form-control" name="lokasi" value="{{$pembelian->lokasi}}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="control-label">Class</label>
                             <select class="form-control" name="class">
-                        <option>Pilih</option>
+                        <option>{{$pembelian->class}}</option>
                         <option value="Barang">Barang</option>
                         <option value="Pangan">Pangan</option>
                     </select>
@@ -149,13 +149,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Diketahui Oleh</label>
-                            <input type="text" class="form-control" name="diketahui_oleh" value="{{old('')}}">
+                            <input type="text" class="form-control" name="diketahui_oleh" value="{{$pembelian->diketahui_oleh}}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="control-label">Disetujui Oleh</label>
-                            <input type="text" class="form-control" name="disetujui_oleh" value="{{old('')}}">
+                            <input type="text" class="form-control" name="disetujui_oleh" value="{{$pembelian->disetujui_oleh}}">
                         </div>
                     </div>
                    </div>

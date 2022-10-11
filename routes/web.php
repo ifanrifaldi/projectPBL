@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ValidasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +19,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('');
 });
 
-Route::get('beranda', [AdminController::class, 'showBeranda']);
 Route::resource('pembelian', PembelianController::class);
 
-Route::resource('admin', AdminController::class);
+Route::get('beranda', [AdminController::class, 'showBeranda']);
+Route::resource('validasi', ValidasiController::class);
 Route::resource('divisi', DivisiController::class);
+Route::resource('user', UserController::class);
+
+
+Route::get('login', [AuthController::class, 'showLogin']);
+Route::post('login', [AuthController::class, 'Loginprocess']);
+Route::get('logout', [AuthController::class, 'Logout']);

@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 use App\Models\Pembelian;
 
 
-class AdminController extends Controller{
+class ValidasiController extends Controller{
     function index(){
         $data['list_pembelian'] = Pembelian::all();
-        return view('admin.index', $data);
+        return view('validasi.index', $data);
     } 
     function create(){
         $user = request()->user();
-        return view('admin.create');
+        return view('validasi.create');
     }
     function store(){
         $pembelian = new Pembelian;
@@ -35,7 +35,7 @@ class AdminController extends Controller{
 
         $pembelian->handleUploadFoto();
 
-        return redirect('pembelian')->with('success', 'Data Berhasil Diajukan');
+        return redirect('validasi')->with('success', 'Data Berhasil Diajukan');
     }
     function show(Pembelian $pembelian){
         $data['pembelian'] = $pembelian;
@@ -67,12 +67,12 @@ class AdminController extends Controller{
 
         $pembelian->handleUploadFoto();
 
-        return redirect('pembelian')->with('success', 'Data Berhasil Diedit');
+        return redirect('validasi')->with('success', 'Data Berhasil Diedit');
     }
     function destroy(Pembelian $pembelian){
         $pembelian->handleDelete();
         $pembelian->delete();
-        return redirect('pembelian')->with('danger', 'Data Berhasil Dihapus');
+        return redirect('validasi')->with('danger', 'Data Berhasil Dihapus');
     }
 
     

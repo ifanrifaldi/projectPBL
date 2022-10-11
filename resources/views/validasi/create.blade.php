@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 mt-5">
-        <form action="{{url('pembelian')}}" method="post" enctype="multipart/form-data">
+        <form action="{{url('validasi')}}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="card">
             <div class="card-header">

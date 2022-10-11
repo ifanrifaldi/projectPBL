@@ -1,153 +1,86 @@
+
 <!DOCTYPE html>
-<!--
-This is a starter adminview page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FANN.SHOES</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="shortcut icon" href="{{url('public/admin')}}/dist/img/logoweb.png" type="image/x-icon" >
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/summernote/summernote-bs4.min.css">
+    <head>
+        <meta charset="utf-8" />
+        <title>SI NALAR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="Premium Multipurpose Admin & Dashboard adminview" name="description" />
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/fontawesome-free/css/all.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="{{ url('public/admin') }}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ url('public/admin') }}/dist/css/adminlte.min.css">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{{url('public/assets')}}/images/sinalar2.png">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- App css -->
+        <link href="{{url('public/assets')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{url('public/assets')}}/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="{{url('public/assets')}}/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{url('public/assets')}}/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{url('public/assets')}}/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="{{url('public/assets')}}/css/app.min.css" rel="stylesheet" type="text/css" />
 
-  @stack('style')
-  
-</head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
+    </head>
 
-  <!-- Navbar -->
-  @include('adminview.section.header')
-  <!-- /.navbar -->
+    <body class="dark-sidenav">
+        <!-- Left Sidenav -->
+        @include('adminview.section.sidebar')
+        <!-- end left-sidenav-->
+        
 
-  <!-- Main Sidebar Container -->
-  
+        <div class="page-wrapper">
+            <!-- Top Bar Start -->
+            @include('adminview.section.header')
+            <!-- Top Bar End -->
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          @include('adminview.utils.notif')
+            <!-- Page Content-->
+            <div class="page-content"> 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        @include('adminview.utils.notif')
+                    </div>
+                </div>
+                @yield('content')
+            </div> 
+
+               @include('adminview.section.footer')
+            </div>
+            <!-- end page content -->
         </div>
-      </div>
-    </div>
-    @yield('content')
-  </div>
+        <!-- end page-wrapper -->
 
-    <!-- /.content -->
-  
-  <!-- /.content-wrapper -->
-  @include('adminview.section.sidebar')
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
-    </div>
+        
 
-  </aside>
-  <!-- /.control-sidebar -->
-  @include('adminview.section.footer')
-  <!-- Main Footer -->
- 
-</div>
-<!-- ./wrapper -->
 
-<!-- REQUIRED SCRIPTS -->
+        <!-- jQuery  -->
+        <script src="{{url('public/assets')}}/js/jquery.min.js"></script>
+        <script src="{{url('public/assets')}}/js/bootstrap.bundle.min.js"></script>
+        <script src="{{url('public/assets')}}/js/metismenu.min.js"></script>
+        <script src="{{url('public/assets')}}/js/waves.js"></script>
+        <script src="{{url('public/assets')}}/js/feather.min.js"></script>
+        <script src="{{url('public/assets')}}/js/simplebar.min.js"></script>
+        <script src="{{url('public/assets')}}/js/jquery-ui.min.js"></script>
+        <script src="{{url('public/assets')}}/js/moment.js"></script>
+        <script src="{{url('public/assets')}}/plugins/daterangepicker/daterangepicker.js"></script>
 
-<!-- jQuery -->
-<!-- jQuery -->
-<script src="{{ url('public/admin') }}/plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="{{ url('public/admin') }}/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="{{ url('public/admin') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="{{ url('public/admin') }}/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="{{ url('public/admin') }}/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="{{ url('public/admin') }}/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="{{ url('public/admin') }}/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="{{ url('public/admin') }}/plugins/moment/moment.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="{{ url('public/admin') }}/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="{{ url('public/admin') }}/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="{{ url('public/admin') }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="{{ url('public/admin') }}/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ url('public/admin') }}/dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ url('public/admin') }}/dist/js/pages/dashboard.js"></script>
+        <script src="{{url('public/assets')}}/plugins/apex-charts/apexcharts.min.js"></script>
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.canvaswrapper.js"></script>
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.colorhelpers.js"></script>
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.flot.js"></script>        
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.flot.saturated.js"></script>
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.flot.browser.js"></script>
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.flot.drawSeries.js"></script>         
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.flot.uiConstants.js"></script>
+        <script src="{{url('public/assets')}}/plugins/flot-chart/jquery.flot-dataType.js"></script>
+        
+        
+        <script src="{{url('public/assets')}}/pages/jquery.crm_dashboard.init.js"></script>
 
-<script src="{{ url('public/admin') }}/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ url('public/admin') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="{{ url('public/admin') }}/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/jszip/jszip.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="{{ url('public/admin') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- AdminLTE App -->
-<script src="{{ url('public/admin') }}/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-  @stack('script')
+        <!-- App js -->
+        <script src="{{url('public/assets')}}/js/app.js"></script>
+        
+    </body>
 
-<script src="{{ url('public/admin') }}/dist/js/demo.js"></script>
-<script>
-  $(".table-datatable").DataTable();
-</script>
-</body>
 </html>

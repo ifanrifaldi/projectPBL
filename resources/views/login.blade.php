@@ -35,19 +35,19 @@
                                             <img src="{{url('public')}}/assets/images/nalar2.png" height="50" alt="logo" class="auth-logo">
                                         </a>
                                         <h4 class="mt-3 mb-1 font-weight-semibold text-white font-18"></h4>   
-                                        <p class="text-muted  mb-0">Sistem Informasi Animal International Rescue</p>  
+                                        <p class="text-muted  mb-0">Sistem Informasi International Animal Rescue</p>  
                                     </div>
                                 </div>
                                 <div class="card-body">
                                      <!-- Tab panes -->
                                     <div class="tab-content">
                                         <div class="tab-pane active px-3 pt-3" id="Register_Tab" role="tabpanel">
-                                            <form class="form-horizontal auth-form my-4" action="index.html">
-            
+                                        <form action="{{url('login')}}" method="post">
+                                            @csrf
                                                 <div class="form-group">
                                                     <label for="username">id</label>
                                                     <div class="input-group mb-3">                                                                                         
-                                                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
+                                                        <input type="text" class="form-control" name="id_user"  placeholder="id_user">
                                                     </div>                                    
                                                 </div><!--end form-group--> 
             
@@ -55,7 +55,7 @@
                                                 <div class="form-group">
                                                     <label for="userpassword">Password</label>                                            
                                                     <div class="input-group mb-3">                                  
-                                                        <input type="password" class="form-control" name="password" id="userpassword" placeholder="Enter password">
+                                                        <input type="password" class="form-control" name="password"  placeholder="password">
                                                     </div>                               
                                                 </div><!--end form-group--> 
                     
@@ -70,10 +70,10 @@
                     
                                                 <div class="form-group mb-0 row">
                                                     <div class="col-12 mt-2">
-                                                        <button class="btn btn-primary btn-block waves-effect waves-light" type="button">Login <i class="fas fa-sign-in-alt ml-1"></i></button>
+                                                        <button type="submit" class="btn btn-primary btn-block waves-effect waves-light" type="button">Login <i class="fas fa-sign-in-alt ml-1"></i></button>
                                                     </div><!--end col--> 
                                                 </div> <!--end form-group-->                           
-                                            </form><!--end form-->         
+                                        </form><!--end form-->         
                                         </div>
                                     </div>
                                 </div><!--end card-body-->

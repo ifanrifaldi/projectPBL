@@ -62,7 +62,6 @@ class PembelianController extends Controller{
     }
     function update(Pembelian $pembelian){
         
-        $pembelian->id = request('id');
         $pembelian->tanggal_pengajuan = request('tanggal_pengajuan');
         $pembelian->tanggal_dibutuhkan = request('tanggal_dibutuhkan');
         $pembelian->nama = request('nama');

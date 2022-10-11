@@ -8,7 +8,7 @@
                         Edit Data User
                     </div>
                     <div class="card-body">
-                        <form action="{{url('admin/pembeli', $pembeli->id)}}" method="post">
+                        <form action="{{url('validasi/pembeli', $pembeli->id)}}" method="post">
                             @csrf
                             @method('put')                       
                             <div class="form-group">
