@@ -30,9 +30,6 @@
                         <a href="{{url('admin/validasi')}}"  class="menu-label {{checkRouteActive('validasi')}}"><i data-feather="grid" style="color: white;" class="align-self-center menu-icon"></i><span>Validasi</span>
                     </li> 
                     <li>
-                        <a href="javascript: void(0);"><i data-feather="lock"  style="color: white;" class="align-self-center menu-icon"></i><span>Perbaikan Aset</span>
-                    </li> 
-                    <li>
                         <a href="{{url('admin/divisi')}}"><i data-feather="lock" style="color: white;" class="align-self-center menu-icon"></i><span>Divisi</span>
                     </li> 
                     <li>
