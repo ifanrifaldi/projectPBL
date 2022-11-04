@@ -5,7 +5,7 @@
   }
 @endphp
 
-<div class="left-sidenav bg-black">
+<div class="left-sidenav ">
             <!-- LOGO -->
             <div class="brand">
                 <a href="crm-index.html" class="logo">
