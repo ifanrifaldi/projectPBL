@@ -5,7 +5,7 @@
   }
 @endphp
 
-<div class="left-sidenav ">
+<div class="left-sidenav">
             <!-- LOGO -->
             <div class="brand">
                 <a href="crm-index.html" class="logo">
@@ -21,28 +21,25 @@
             <!--end logo-->
             <div class="menu-content h-100" data-simplebar>
                 <ul class="metismenu left-sidenav-menu">
-                    <li class="menu-label mt-0">ADMIN</li>
+                    <li class="menu-label mt-0 " style="color: white;" >ADMIN</li>
                     
                     <li>
-                        <a href="javascript: void(0);"  class="menu-label {{checkRouteActive('admin/produk')}}"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span>
+                        <a href="javascript: void(0);"  class="menu-label {{checkRouteActive('admin/produk')}}"> <i data-feather="home" style="color: white;"  class="align-self-center menu-icon"></i><span>Dashboard</span>
                     </li>
                     <li>
-                        <a href="{{url('admin/validasi')}}"  class="menu-label {{checkRouteActive('validasi')}}"><i data-feather="grid" class="align-self-center menu-icon"></i><span>Validasi</span>
+                        <a href="{{url('admin/validasi')}}"  class="menu-label {{checkRouteActive('validasi')}}"><i data-feather="grid" style="color: white;" class="align-self-center menu-icon"></i><span>Validasi</span>
                     </li> 
                     <li>
-                        <a href="javascript: void(0);"><i data-feather="lock" class="align-self-center menu-icon"></i><span>Perbaikan Aset</span>
+                        <a href="javascript: void(0);"><i data-feather="lock"  style="color: white;" class="align-self-center menu-icon"></i><span>Perbaikan Aset</span>
                     </li> 
                     <li>
-                        <a href="{{url('admin/divisi')}}"><i data-feather="lock" class="align-self-center menu-icon"></i><span>Divisi</span>
+                        <a href="{{url('admin/divisi')}}"><i data-feather="lock" style="color: white;" class="align-self-center menu-icon"></i><span>Divisi</span>
                     </li> 
                     <li>
-                        <a href="{{url('admin/pegawai')}}"><i data-feather="user" class="align-self-center menu-icon"></i><span>Pegawai</span>
+                        <a href="{{url('admin/pegawai')}}"><i data-feather="user"  style="color: white;" class="align-self-center menu-icon"></i><span>Pegawai</span>
                     </li> 
-                    <hr class="hr-dashed hr-menu">
-                    <li class="menu-label my-2">Setting</li>
-    
                     <li>
-                        <a href="{{url('logout')}}"><i data-feather="box" class="align-self-center menu-icon"></i><span>Logout</span>
+                        <a href="{{url('logout')}}"><i data-feather="box" style="color: white;"  class="align-self-center menu-icon"></i><span>Logout</span>
                     </li>
                 </ul>
             </div>
