@@ -86,66 +86,64 @@
                                     <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->nama_kegiatan}}</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Nama Barang:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->nama_barang}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Deskripsi Barang:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->deskripsi_barang}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Jumlah:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->jumlah}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lokasi:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->lokasi}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Kategori:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->kategori}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Foto Barang:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">
-
-                                    <div class="col d-md-flex">
-                                        <div class="bg-light">
-                                        <img src="{{url("public",$pembelian->foto)}}" alt="" style="width:100px">
-                                        </div>
-                                    </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Diketahui Oleh:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->diketahui_oleh}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Disetujui Oleh:</td>
-                                <td>
-                                    <a href="#" id="inline-username" data-type="text" data-pk="1" data-title="Enter username">{{$pembelian->disetujui_oleh}}</a>
-                                </td>
-                            </tr>
-                            
                             </tbody>
-                        </table><!--end table-->        
+                        </table><!--end table-->  
+                        <br>
+                        <table>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Daftar Permintaan</h4>
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="table-responsive-sm">
+                                        <table class="table mb-0">
+                                            <caption>List of users</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">No</th>
+                                                    <th scope="col">Nama Barang</th>
+                                                    <th scope="col">Deskripsi Barang</th>
+                                                    <th scope="col">Jumlah</th>
+                                                    <th scope="col">Foto Barang</th>
+                                                    <th scope="col">Lokasi</th>
+                                                    <th scope="col">Kategori</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>{{$pembelian->nama_barang}}</td>
+                                                    <td>{{$pembelian->deskripsi_barang}}</td>
+                                                    <td>{{$pembelian->jumlah}}</td>
+                                                    <td><img src="{{url("public",$pembelian->foto)}}" alt="" style="width:100px"></td>
+                                                    <td>{{$pembelian->lokasi}}</td>
+                                                    <td>{{$pembelian->kategori}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table><!--end /table-->
+                                    </div><!--end /tableresponsive-->
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+
+                        </div> <!-- end col -->
+                        </table>
                     </div><!--end card-body-->
                 </div><!--end card-->
+                <div class="card">
+                    <div class="card-body">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr></tr>
+                            <tr>
+                                <td>Diketahui Oleh: {{$pembelian->diketahui_oleh}}</td>
+                                <td>Disetujui Oleh: {{$pembelian->disetujui_oleh}}</td>
+                            </tr>
+                        </thead>
+                    
+                    </table>
+                    </div>
+                </div>
             </div> <!-- end col -->
         </div> <!-- end row -->
 

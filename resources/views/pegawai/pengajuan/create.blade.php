@@ -97,52 +97,6 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="form-group">
-                                        <label for="" class="control-label">Nama Barang</label>
-                                        <input type="text" class="form-control" name="nama_barang">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="" class="control-label">foto</label>
-                                        <input type="file" class="form-control" name="foto" accept=".png,">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="control-label">Deskripsi Barang</label>
-                                <textarea name="deskripsi_barang" id="deskripsi" class="form-control"></textarea>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="" class="control-label">Jumlah</label>
-                                        <input type="text" class="form-control" name="jumlah">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="" class="control-label">Lokasi</label>
-                                        <input type="text" class="form-control" name="lokasi">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="" class="control-label">Kategori</label>
-                                        <select class="form-control" name="kategori">
-                                            <option>Pilih</option>
-                                            <option value="Barang">Barang</option>
-                                            <option value="Pangan">Pangan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="row">
                         <div class="col-12">
@@ -151,7 +105,6 @@
                                     <h4 class="card-title">Daftar Permintaan</h4>
                                 </div><!--end card-header-->
                                 <div class="card-body">
-                                    <button class="btn  btn-primary mb-3" id="submit_data">Submit</button>
                                     <div class="table-responsive">
                                         <table class="table  table-bordered" id="makeEditable">
                                             <thead>
@@ -159,47 +112,28 @@
                                                 <th>Nama Barang</th>
                                                 <th>Deskripsi Barang</th>
                                                 <th>Jumlah</th>
-                                                <th>Satuan</th>
+                                                <th>Foto Barang</th>
                                                 <th>Lokasi</th>
                                                 <th>Kategori</th>
-
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Laptop</td>
-                                                <td>Asus ROG</td>
-                                                <td>1</td>
-                                                <td>2kg</td>
-                                                <td>Kalimantan Barat</td>
-                                                <td>
-                                                    <select class="form-control" name="kategori">
-                                                        <option>Pilih</option>
-                                                        <option value="Barang">Barang</option>
-                                                        <option value="Pangan">Pangan</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Laptop</td>
-                                                <td>Asus ROG</td>
-                                                <td>1</td>
-                                                <td>2kg</td>
-                                                <td>Kalimantan Barat</td>
-                                                <td>
-                                                    <select class="form-control" name="kategori">
-                                                        <option>Pilih</option>
-                                                        <option value="Barang">Barang</option>
-                                                        <option value="Pangan">Pangan</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
                                             <tr class="success">
-                                                <td>Laptop</td>
-                                                <td>Asus ROG</td>
-                                                <td>1</td>
-                                                <td>2kg</td>
-                                                <td>Kalimantan Barat</td>
+                                                <td>
+                                                    <input type="text" class="form-control" name="nama_barang">
+                                                </td>
+                                                <td>
+                                                    <textarea name="deskripsi_barang" id="deskripsi" class="form-control"></textarea>
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" name="jumlah">
+                                                </td>
+                                                <td>
+                                                    <input type="file" class="form-control" name="foto" accept=".png,">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" name="lokasi">
+                                                </td>
                                                 <td>
                                                     <select class="form-control" name="kategori">
                                                         <option>Pilih</option>
@@ -213,7 +147,7 @@
                                         </table>
                                     </div>
                                     <span class="float-right">
-                                        <button id="but_add" class="btn btn-danger">Add New Row</button>
+                                        <div id="but_add" class="btn btn-danger">Tambah Barang</div>
                                     </span><!--end table-->     
                                 </div><!--end card-body-->
                             </div><!--end card-->

@@ -29,7 +29,7 @@ class AuthController extends controller
 
     function logout()
     {
-        Auth::logout();
+        Auth()->logout();
         return redirect('login');  
     }
 

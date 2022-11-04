@@ -28,7 +28,16 @@ Route::get('/', function () {
 });
 Route::prefix('pegawai')->middleware('auth:pegawai')->group(function (){
     Route::resource('/', BasePegawaiController::class);
-    Route::resource('pengajuan', PengajuanController::class);
+
+    Route::get('pengajuan', [PengajuanController::class, 'index']);
+    Route::get('pengajuan/create', [PengajuanController::class, 'create']);
+    Route::post('pengajuan', [PengajuanController::class, 'store']);
+    Route::get('pengajuan/{pembelian}', [PengajuanController::class,'show']);
+    Route::get('pengajuan/{pembelian}/edit', [PengajuanController::class,'edit']);
+    Route::put('pengajuan/{pembelian}', [PengajuanController::class,'update']);
+    Route::delete('pengajuan/{pembelian}', [PengajuanController::class, 'destroy']);
+    // Route::resource('pengajuan', PengajuanController::class);
+    // Route::get('pengajuan/edit', [PengajuanController::class, 'edit']);
 
 });
 

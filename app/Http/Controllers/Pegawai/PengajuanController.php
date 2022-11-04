@@ -84,10 +84,8 @@ class PengajuanController extends Controller{
         $pembelian->kategori = request('kategori');
         $pembelian->diketahui_oleh = request('diketahui_oleh');
         $pembelian->disetujui_oleh = request('disetujui_oleh');
-        
+        If(request('foto')) $pembelian->handleuploadfoto();
         $pembelian->save();
-
-        $pembelian->handleUploadFoto();
 
         return redirect('pegawai/pengajuan')->with('success', 'Data Berhasil Diedit');
     }

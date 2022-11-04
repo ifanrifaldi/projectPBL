@@ -38,7 +38,7 @@ class PembelianController extends Controller{
         $pembelian->tanggal_pengajuan = request('tanggal_pengajuan');
         $pembelian->tanggal_dibutuhkan = request('tanggal_dibutuhkan');
         $pembelian->id_divisi = request('id_divisi');
-        $pembelian->nama = request('nama');
+        $pembelian->nama_pengaju = request('nama_pengaju');
         $pembelian->nama_divisi = request('nama_divisi');
         $pembelian->nama_kegiatan = request('nama_kegiatan');
         $pembelian->nama_barang = request('nama_barang');
