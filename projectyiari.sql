@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 15, 2022 at 05:33 AM
+-- Generation Time: Dec 15, 2022 at 01:09 PM
 -- Server version: 5.7.33
 -- PHP Version: 8.1.9
 
@@ -83,7 +83,9 @@ INSERT INTO `barang` (`id`, `id_pengajuan`, `nama_barang`, `jumlah`, `lokasi`, `
 (43, 44, 'hammock', 2, '234', 'Barang', 'kain', 'app/barang/5sQqc.png', '2022-12-14 05:39:58', '2022-12-14 05:39:58'),
 (44, 45, 'hammock', 123, '456', 'Barang', 'iye', 'app/barang/lJN3H.png', '2022-12-14 18:15:41', '2022-12-14 18:15:41'),
 (45, 45, 'tikar', 23, '234', 'Pangan', 'iye', 'app/barang/ZsjoV.png', '2022-12-14 18:15:41', '2022-12-14 18:15:41'),
-(46, 46, 'apapun', 12, '234', 'Barang', 'yyyyyy', 'app/barang/Gu12y.png', '2022-12-14 22:08:13', '2022-12-14 22:08:13');
+(46, 46, 'apapun', 12, '234', 'Barang', 'yyyyyy', 'app/barang/Gu12y.png', '2022-12-14 22:08:13', '2022-12-14 22:08:13'),
+(47, 47, 'monitor', 6, '234', 'Barang', 'amoled', 'app/barang/7uo7a.webp', '2022-12-14 23:26:21', '2022-12-14 23:26:21'),
+(48, 47, 'sound', 2, '234', 'Barang', 'wireles', 'app/barang/Y1jVd.jfif', '2022-12-14 23:26:21', '2022-12-14 23:26:21');
 
 -- --------------------------------------------------------
 
@@ -203,7 +205,8 @@ INSERT INTO `pengajuan` (`id`, `id_pegawai`, `no_surat`, `nama_pengaju`, `tgl_pe
 (43, 18, 'IAR2022121', 'Putra Kelana', '2022-12-07', '2022-12-07', 'har', 'dila', 'Diproses', 'ngab', '2022-12-06 22:47:25', '2022-12-06 22:47:25'),
 (44, 18, 'IAR2022122', 'Ifan Rifalldi', '2022-12-14', '2022-12-16', 'lola', 'reghita', 'Diproses', 'hilling', '2022-12-14 05:39:57', '2022-12-14 05:39:57'),
 (45, 18, 'IAR2022123', 'Ifan Rifalldi', '2022-12-15', '2022-12-15', 'arjun', 'ifan', 'Ditolak', 'hilling', '2022-12-14 18:15:41', '2022-12-14 22:03:47'),
-(46, 18, 'IAR2022124', 'lola', '2022-12-15', '2022-12-15', 'ifan', 'ifan', 'Diterima', 'iari', '2022-12-14 22:08:13', '2022-12-14 22:09:33');
+(46, 18, 'IAR2022124', 'lola', '2022-12-15', '2022-12-15', 'ifan', 'ifan', 'Diterima', 'iari', '2022-12-14 22:08:13', '2022-12-14 22:09:33'),
+(47, 18, 'IAR2022125', 'Ifan Rifalldi', '2022-12-15', '2022-12-15', 'manajer', 'ketua divisi', 'Diproses', 'expo', '2022-12-14 23:26:21', '2022-12-14 23:26:21');
 
 --
 -- Indexes for dumped tables
@@ -247,13 +250,13 @@ ALTER TABLE `pengajuan`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `divisi`
@@ -265,13 +268,13 @@ ALTER TABLE `divisi`
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `pengajuan`
 --
 ALTER TABLE `pengajuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
