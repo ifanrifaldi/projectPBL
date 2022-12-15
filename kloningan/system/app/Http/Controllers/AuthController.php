@@ -23,7 +23,7 @@ class AuthController extends controller
         }
         if (Auth::guard('admin')->attempt(['nik' => request('nik'), 'password' => request('password')])) {
 
-            return redirect('admin/dashboardadmin')->with('succes', 'Login Berhasil');
+            return redirect('admin/dashboard')->with('succes', 'Login Berhasil');
         }
         return back()->with('danger', 'Login Gagal');
     }
