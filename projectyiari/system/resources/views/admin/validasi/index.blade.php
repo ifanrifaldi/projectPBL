@@ -194,7 +194,7 @@
                                                                         <center>
                                                                             <div class="btn-group-center">
                                                                                 <a href="{{url('admin/validasi',$pengabdi->id)}}" class="btn btn-primary"><i class="fa fa-info"></i></a>
-                                                                                <!-- <a href="{{url('admin/pengajuan/hapus',$pengabdi->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i></a> -->
+                                                                                <a href="{{url('admin/pengajuan/hapus',$pengabdi->id)}}" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Pengajuan')" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                                                             </div>
                                                                         </center>
                                                                     </td>
